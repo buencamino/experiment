@@ -5,6 +5,48 @@ h1 {
     width : 50%;
 }
 
+body {
+    background-color : ivory;
+}
+
+.maincontainer {
+    width : 1200px;
+    margin-left : auto;
+    margin-right : auto;
+}
+
+.center {
+    width : 60%;
+    float : left;
+}
+
+.sidebar {
+    width : 40%;
+    float : left;
+}
+
+.imagebanner {
+    position : relative;
+}
+
+.imagebanner img {
+    width : 100%;
+    display : block;
+}
+
+.imagedescription {
+    font-family : Verdana, Geneva, Tahoma, sans-serif;
+    font-size : medium;
+    position : absolute;
+    bottom : 0;
+    left : 0;
+    background-color : rgba(0, 0, 0, .5);
+    color : #FFF;
+    width : 100%;
+    padding : 10px 20px;
+    box-sizing : border-box;
+}
+
 .site-nav {
     position : relative;
     margin : 0px;
@@ -36,18 +78,12 @@ h1 {
     color : rgb(42, 167, 240);
 }
 
-.maincontainer {
-    width : 1200px;
-    margin-left : auto;
-    margin-right : auto;
-}
-
 fieldset {
     color : hotpink;
-
 }
 
 .container {
+    margin-top : 20px;
     border-top : 3px solid black;
     border-bottom : 3px solid black;
 }
