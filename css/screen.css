@@ -5,11 +5,65 @@ h1 {
     width : 50%;
 }
 
+.site-nav {
+    position : relative;
+    margin : 0px;
+}
+
+.site-nav ul {
+    margin : 0px;
+    padding : 0px;
+}
+.site-nav li {
+    list-style : none;
+    float : left;
+    margin-right : 5px;
+}
+
+.site-nav a {
+    display : block;
+    text-decoration : none;
+    color : green;
+    padding : 10px 20px;
+    border : 3px solid green;
+}
+
+.site-nav a:hover {
+    background-color : lightgray;
+}
+
 .content1 {
     color : rgb(42, 167, 240);
 }
 
+.maincontainer {
+    width : 1200px;
+    margin-left : auto;
+    margin-right : auto;
+}
+
 fieldset {
     color : hotpink;
-    
+
+}
+
+.container {
+    border-top : 3px solid black;
+    border-bottom : 3px solid black;
+}
+
+.box-a {
+    background-color : lightgray;
+    width : 66%;
+    float : left;
+}
+
+.box-b {
+    width : 34%;
+    float : left;
+    border-bottom: 3px solid black;
+}
+
+.fix {
+    clear : both;
 }
