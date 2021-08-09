@@ -211,3 +211,41 @@ footer {
     color : rgba(0,0,0,.5);
     margin-top : 30px;
 }
+
+.mainpanel {
+    max-width : 1200px;
+    margin : 40px auto 0 auto;
+    padding : 20px 50px;
+    display: flex;
+}
+
+.leftpanel {
+    flex: 1;
+    background-color:burlywood;
+    padding: 20px 20px;
+    margin-right: 20px;
+    border: 1px solid black;
+    border-radius: 10%;
+
+}
+
+.centerpanel {
+    flex: 3;
+    order: 0;
+    background-color:cornflowerblue;
+    padding: 20px 20px;
+    margin-right: 20px;
+    border: 1px solid black;
+    border-radius: 10px 10px 25px 25px;
+}
+
+.rightpanel {
+    flex: 1;
+    background-color:darksalmon;
+    padding: 20px 20px;
+    margin-right: 20px;
+    flex-wrap : wrap;
+    align-items: flex-start;
+    border: 1px solid black;
+    border-radius: 10px 25px;
+}
