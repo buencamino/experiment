@@ -3,6 +3,10 @@
 <head>
     <title>First Experiment</title>
     <link rel = "stylesheet" href = "css/screen.css">
+    <link rel = "stylesheet" href = "css/lightbox.css">
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/cycle2.js"></script>
+    <script type="text/javascript" src="js/lightbox.min.js"></script>
 </head>
 <body>
 
@@ -11,12 +15,12 @@
         Hello Stranger!
     </h1>
 
-    <nav class = "site-nav">
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Records</a></li>
-            <li><a href="#">Contact Us</a></li>
-        </ul>
+    <nav class = "site-nav boxes">
+            <ul>
+                <div class="link"><li><a href="#">Home</a></li></div>
+                <div class="link"><li><a href="#">Records</a></li></div>
+                <div class="link"><li><a href="#">Contact Us</a></li></div>
+            </ul>
         <div class = "fix"></div>
     </nav>
 
@@ -39,15 +43,51 @@
         <input type = "checkbox" id = "test1" name = "test">
         <label for = "test1">testing 1</label>
         </span>
-    
-        <div class="imagebanner">
-            <img src="images/uniform.jpg" alt = "old varsity uniform">
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dignissimos error ipsum reprehenderit, adipisci obcaecati quia aut iste perspiciatis nam tempore est modi voluptates rem? Expedita doloribus rem voluptatibus autem maiores!
+        </p>
+        <div class="cycle-slideshow" data-cycle-slides=".slide" data-cycle-pause-on-hover="true">
+            <span class="cycle-prev">&laquo</span>
+            <span class="cycle-next">&raquo</span>
 
-            <div class="imagedescription">
-                <p>My high school volleyball uniform..</p>
+            <span class="cycle-pager"></span>
+            <div class="slide">
+                <img src="images/uniform.jpg" alt = "old varsity uniform">               
+                <div class="slide-text">
+                    <h3>Uniform</h3>
+                    <p>My high school volleyball uniform.. <a href="images/uniform.jpg" class="btn-a" data-lightbox="gallery" data-title="My high school volleyball uniform..">Open Gallery</a></p>
+                </div>        
             </div>    
-            <div class = "fix"></div>
+            <div class="slide">
+                <img src="images/tyrano.jpg" alt = "t-rex keycap">
+                <div class="slide-text">
+                    <h3>Keycap</h3>
+                    <p>A tyranosaurus rex key-cap.. <a href="images/tyrano.jpg" class="btn-a" data-lightbox="gallery" data-title = "A tyranosaurus rex key-cap..">Open Gallery</a></p>
+                </div>
+            </div>    
+            <div class="slide">
+                <img src="images/jlc.jpg" alt = "master control geographic">
+                <div class="slide-text">
+                    <h3>Watch</h3>
+                    <p>A Jaeger Lecoultre Master Control Geographic.. <a href="images/jlc.jpg" class="btn-a" data-lightbox="gallery" data-title="A JLC Master Control Geographic..">Open Gallery</a></p>
+                </div>
+            </div>    
+            <!--<div class = "fix"></div>-->
         </div>
+        
+<!--
+    <div class="cycle-slideshow" data-cycle-slides=".slide">
+            <div class="imagebanner">
+                <img src="images/uniform.jpg" alt = "old varsity uniform">
+                <img src="images/tyrano.jpg" alt = "t-rex keycap">
+                <img src="images/jlc.jpg" alt = "master control geographic">
+    
+                <div class="imagedescription">
+                    <p>My high school volleyball uniform..</p>
+                </div>    
+                <div class = "fix"></div>
+            </div>    
+        </div>
+-->
 
         <br>
            
@@ -130,6 +170,7 @@
 
         <div class = "centerpanel">
             <strong>Testing center panel</strong>, Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum id reprehenderit sapiente atque architecto voluptatibus tempore unde fuga accusantium distinctio. Natus, dolorum! Sunt sequi quasi saepe id sint asperiores explicabo.
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/JT_mUAVr-WA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
 
         <div class = "rightpanel">
@@ -142,6 +183,7 @@
             &copy Hoy83 corporation
         </p>
     
+        <div class="testbutton">Click Me!</div>
     </footer>
 
 </div>

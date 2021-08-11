@@ -1,3 +1,31 @@
+@keyframes fadeBounce {
+    0% {
+        opacity: 0;
+        transform: translateY(-200%);
+    }
+
+    40%{
+        transform: translateY(0);
+    }
+
+    55% {
+        transform: translateY(-6px);
+    }
+
+    70% {
+        transform: translateY(0);
+    }
+
+    85% {
+        transform: translateY(-3px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 h1 {
     color : orange;
     text-align : center;
@@ -27,13 +55,27 @@ body {
     float : left;
 }
 
+@media screen and (max-width:700px) {
+    .center, .siderbar {
+        width: auto;
+        float: none;
+    }
+
+    .maincontainer {
+        width: 480px;
+    }
+}
+
 .imagebanner {
     position : relative;
+    overflow: hidden;
 }
 
 .imagebanner img {
     width : 100%;
     display : block;
+    transition-property: all;
+    transition-duration: 2s;
 }
 
 .imagedescription {
@@ -47,6 +89,19 @@ body {
     width : 100%;
     padding : 10px 20px;
     box-sizing : border-box;
+    transform: translatey(100%);
+    opacity: 0;
+    transition-property: all;
+    transition-duration: 2s;
+}
+
+.imagebanner:hover .imagedescription {
+    transform: translatey(0);
+    opacity: 1;
+}
+
+.imagebanner:hover img {
+    transform: scale(1.5);
 }
 
 .site-nav {
@@ -70,6 +125,18 @@ body {
     color : green;
     padding : 10px 20px;
     border : 3px solid green;
+    opacity: 0;
+    animation: fadeBounce 1s forwards;
+}
+
+nav > ul > div:nth-child(1) > li > a {
+    animation-delay: .5s;
+}
+nav > ul > div:nth-child(2) > li > a { 
+    animation-delay: 1s; 
+}
+nav > ul > div:nth-child(3) > li > a { 
+    animation-delay: 1.5s; 
 }
 
 .site-nav a:hover {
@@ -79,6 +146,9 @@ body {
 
 fieldset {
     background-image: linear-gradient(to right, #c5eadc, #FFF);
+    animation-name: fadeBounce;
+    animation-duration: 1s;
+    color : hotpink;
 }
 
 .testlabel {
@@ -99,10 +169,6 @@ fieldset {
     text-align : center;
     text-indent : 25px;
     line-height : 1.5;
-}
-
-fieldset {
-    color : hotpink;
 }
 
 .container {
@@ -249,6 +315,7 @@ footer {
     border: 1px solid black;
     border-radius: 10px 10px 25px 25px;
     transform: rotate(25deg);
+    box-shadow: inset 2px 10px 10px rgba(0,0,0,.5), 2px 10px 10px #000;
 }
 
 .rightpanel {
@@ -269,4 +336,115 @@ footer {
 .rightpanel:hover {
     opacity: 1;
     transform: scale(1.5);
+}
+
+/* javascript */
+.slide {
+    position: relative;
+    margin-bottom: 100px;
+}
+
+.slide img {
+    width: 100%;
+    display: block;
+}
+
+.slide-text {
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(0,0,0,.7);
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    color: white;
+}
+
+.cycle-prev, .cycle-next {
+    position: absolute;
+    top: 30%;
+    background-color: rgba(0,0,0,.35);
+    color: #FFF;
+    padding: 1px 10px;
+    display: block;
+    cursor: pointer;
+    font-size: 130%;
+    z-index: 1000;
+    opacity: 0;
+    transition-property: opacity; 
+    transition-duration: .5s;
+}
+
+.cycle-next {
+    right: 0;
+}
+
+.cycle-slideshow:hover .cycle-prev,
+.cycle-slideshow:hover .cycle-next {
+    opacity: 1;
+}
+
+.cycle-pager {
+    position: absolute;
+    top: 20px;
+    z-index: 1003;
+    width: 100%;
+    text-align: center;
+}
+
+.cycle-pager span {
+    text-indent: -9999px;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #FFF;
+    margin: 0 4px;
+    cursor: pointer;
+}
+
+.cycle-pager .cycle-pager-active {
+    background-color: gray;
+}
+
+.slide-text a{
+    transition: all .2s ease-in-out;
+}
+
+.slide-text a:hover {
+    transform: rotate(45deg);
+    color: blue;
+}
+.btn-a {
+    padding: 6px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: #365267;
+    color: #FFF;
+    font-size: 84%;
+    margin-left: 10px;
+}
+
+.btn-a:hover {
+    background-color: #FFF;
+    /*color: #365267; */
+}
+
+/* test button */
+.testbutton {
+    border : 1px solid black;
+    background-color:brown;
+    color: #FFF;
+    padding: 20px 20px;
+    font-size:large;
+    width: 25%;
+    margin-left: auto;
+    margin-right: auto;
+    transition: all 1s;
+}
+
+.testbutton:hover, .testbutton:focus {
+    transform: rotate(-45deg) scale(0.5) translatex(500px);
+    background-color: #FFF;
+    color:rgb(42, 167, 240);
 }
